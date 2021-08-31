@@ -1,0 +1,4 @@
+App\Entity\PaymentOrderId:
+    attributes:
+        value:
+            groups: ['api_response']

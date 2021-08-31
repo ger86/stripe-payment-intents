@@ -1,0 +1,10 @@
+App\Model\Shared\Domain\PaginatedResults:
+    attributes:
+        results:
+            groups: ['api_response']
+        total:
+            groups: ['api_response']
+        resultsPerPage:
+            groups: ['api_response']
+        totalPages:
+            groups: ['api_response']

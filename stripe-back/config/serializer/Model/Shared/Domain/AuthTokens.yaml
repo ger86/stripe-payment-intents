@@ -1,0 +1,7 @@
+App\Model\Shared\Domain\AuthTokens:
+    attributes:
+        token:
+            groups: ['api_response']
+        refreshToken:
+            groups: ['api_response']
+            serialized_name: refresh_token

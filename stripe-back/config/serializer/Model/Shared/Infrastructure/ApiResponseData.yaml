@@ -1,0 +1,10 @@
+App\Model\Shared\Infrastructure\ApiResponseData:
+    attributes:
+        success:
+            groups: ['api_response']
+        message:
+            groups: ['api_response']
+        errorCode:
+            groups: ['api_response']
+        data:
+            groups: ['api_response']

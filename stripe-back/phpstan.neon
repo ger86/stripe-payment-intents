@@ -1,0 +1,37 @@
+parameters:
+    phpVersion: 80000
+    level: 8
+    paths:
+        - src
+    symfony:
+        container_xml_path: 'var/cache/dev/App_KernelDevDebugContainer.xml'
+    doctrine:
+        objectManagerLoader: build/phpstan/doctrine-orm-bootstrap.php
+        repositoryClass: Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository
+    reportUnmatchedIgnoredErrors: false
+    checkMissingIterableValueType: false
+    ignoreErrors:
+        - '#Access to an undefined property Stripe\\StripeObject::\$object#'
+    banned_code:
+        nodes:
+            -
+                type: Stmt_Echo
+                functions: null
+            -
+                type: Expr_Eval
+                functions: null
+            -
+                type: Expr_Exit
+                functions: null
+            -
+                type: Expr_FuncCall
+                functions:
+                    - dd
+                    - debug_backtrace
+                    - dump
+                    - passthru
+                    - phpinfo
+                    - print_r
+                    - proc_open
+                    - system
+                    - var_dump

@@ -1,0 +1,4 @@
+App\Entity\Status:
+    attributes:
+        value:
+            groups: ['api_response']

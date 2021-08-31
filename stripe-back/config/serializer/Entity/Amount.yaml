@@ -1,0 +1,6 @@
+App\Entity\Amount:
+    attributes:
+        value:
+            groups: ['api_response']
+        currency:
+            groups: ['api_response']

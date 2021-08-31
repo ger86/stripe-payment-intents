@@ -1,0 +1,16 @@
+App\Entity\PaymentOrder:
+    attributes:
+        id:
+            groups: ['api_response']
+        amount:
+            groups: ['api_response']
+        description:
+            groups: ['api_response']
+        createdAt:
+            groups: ['api_response']
+        paidAt:
+            groups: ['api_response']
+        status:
+            groups: ['api_response']
+        stripePaymentIntent:
+            groups: ['api_response']

@@ -1,0 +1,6 @@
+App\Entity\StripePaymentIntent:
+    attributes:
+        paymentIntentId:
+            groups: ['api_response']
+        clientSecret:
+            groups: ['api_response']

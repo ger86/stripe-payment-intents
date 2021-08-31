@@ -1,0 +1,24 @@
+parameters:
+    app.stripe.secret_key: '%env(STRIPE_SECRET_KEY)%'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Model/'
+            - '../src/Kernel.php'
+            - '../src/Tests/'
+
+    App\Service\Stripe\Api\StripeApiClient:
+        abstract: true
+        arguments:
+            $secretKey: '%app.stripe.secret_key%'
+
+    App\Service\Stripe\Api\PaymentIntentsApiClient:
+        parent: App\Service\Stripe\Api\StripeApiClient
